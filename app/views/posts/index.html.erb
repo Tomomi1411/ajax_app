@@ -1,11 +1,27 @@
-<h1>AjaxApp</h1>
-<%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
-  <%= form.text_field :content %>
+<<<<<<< HEAD
+<h1>FirstAPP</h1>
+<%= form_with url: "/posts", method: :post,id: "form" do |form| %>
+  <%= form.text_field :content  , id: "content"%>
   <%= form.submit '投稿する' , id: "submit" %>
 <% end %>
 
+<div id="list">
+</div>
+
 <% @posts.each do |post| %>
-  <div class="post">
+  <div class="post" data-id = <%= post.id %> data-check=<%= post.checked %>>
+=======
+<h1>AjaxApp</h1>
+  <%= form_with url: "/posts", method: :post,id: "form" do |form| %>
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' , id: "submit" %>
+<% end %>
+<% @posts.each do |post| %>
+  <div class="post" data-id=<%= post.id %> data-check=<%= post.checked %>>
+<<<<<<< HEAD
+>>>>>>> a1d2b189f31260bf333bea445ec3e123b3b49d18
+=======
+>>>>>>> a1d2b189f31260bf333bea445ec3e123b3b49d18
     <div class="post-date">
       投稿日時：<%= post.created_at %>
     </div>
